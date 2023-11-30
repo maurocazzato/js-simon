@@ -26,7 +26,7 @@ playGame.addEventListener("click", function(){
         function () {
             // lista numeri definiti dopo i 30 secondi dall'utente
             const list = [];
-            const listok =(casualNumber.includes(list));
+            const listok =[];
 
             // quando il contatore arriva a 0
             if(second === 0){
@@ -42,8 +42,10 @@ playGame.addEventListener("click", function(){
                         list.push(numero);
                     };
                         // Dopo che sono stati inseriti i 5 numeri, il software dice quanti e quali dei numeri da indovinare sono stati individuati.
-                console.log("i numeri giusti sono: " + listok);
-               
+                        if(casualNumber.includes(list)){
+                            list.add(listok);
+                        }
+                         console.log(listok);
 
             // se non è a 0 il contatore procede in diminuzione
             } else{
