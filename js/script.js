@@ -6,6 +6,7 @@
 // faccio partire il gioco
 const playGame = document.querySelector(".play");
 const box = document.querySelector(".boxnumber");
+const boxnumberok = document.querySelector(".boxnumberok");
 
     // al click....
 playGame.addEventListener("click", function(){
@@ -27,6 +28,7 @@ playGame.addEventListener("click", function(){
             // lista numeri definiti dopo i 30 secondi dall'utente
             const list = [];
             const listok =[];
+            
 
             // quando il contatore arriva a 0
             if(second === 0){
@@ -40,12 +42,17 @@ playGame.addEventListener("click", function(){
                         numero = parseInt(numero);
                         // i numeri finiscono nella lista di Array
                         list.push(numero);
-                    };
+                   
                         // Dopo che sono stati inseriti i 5 numeri, il software dice quanti e quali dei numeri da indovinare sono stati individuati.
-                        if(casualNumber.includes(list)){
-                            list.add(listok);
+                        if(casualNumber.includes(numero)){
+                            listok.push(numero);
+
                         }
-                         console.log(listok);
+                        //  console.log(listok);   
+                    };
+
+                 boxnumberok.append(listok);
+                 
 
             // se non è a 0 il contatore procede in diminuzione
             } else{
