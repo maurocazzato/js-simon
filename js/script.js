@@ -40,19 +40,20 @@ playGame.addEventListener("click", function(){
                         // i numeri finiscono nella lista di Array
                         list.push(numero);
                           
-                        // se i numeri sono uguali allora l'utente ha vinto
-                    if(casualNumber.includes(list)){
-                        console.log("hai vinto!");
+                        // Dopo che sono stati inseriti i 5 numeri, il software dice quanti e quali dei numeri da indovinare sono stati individuati.
+                    if(casualNumber.includes(numero)){
+                        console.log("i numeri giusti sono: " + numero);
+                        
                         
                      }else{
                         // se i numeri sono diversi l'utente ha perso
-                        console.log("hai perso!");
+                        console.log("ritenta!");
                      }
                        
                     };
-                        console.log(list);
+                        // console.log(list);
 
-                
+            // se non è a 0 il contatore procede in diminuzione
             } else{
    
                 second--;
